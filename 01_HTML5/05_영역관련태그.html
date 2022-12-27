@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>	
+		<head>
+            
+            <meta charset="UTF-8"> <!-- 종료태그 없음-->
+            <meta name = "generator" content = "VScode"> <!-- genertor : 이 문서를 생성한 프로그램-->
+            <meta name = "author" content = "choijjang"> <!-- author : 이 문서의 저자-->
+            <meta name = "description" content="이 문서는 글자관련된 태그들을 공부하는 문서입니다.">
+            <title>영역관련태그</title> <!--title을 달면 탑에 있는 제목이 바뀜-->
+            <style>
+                div{
+                    width: 200px;
+                    height: 200px;
+                    border: solid;
+                }
+            </style>
+
+		</head>
+			
+		<body>
+            <!--
+                블럭요소 : 한 줄 단위로 영역을 차지함
+                            줄바꿈이 적용되어 이미 존재하는 태그의 다음줄에 영역이 잡힘.
+                            (p, pre, "div",.....)
+                인라인요소 : content(내용) 영역에 해당하는 부분만 영역을 차지하는 요소
+                            줄 바꿈이 적용되지 않아 옆으로 영역이 잡힘
+                            (다음줄로 넘기고자 한다면 직접 br 작성해야함)
+                            (b, mark, s, img, "span", ..)  
+
+            -->
+
+            <h1> 영역 관련 태그</h1>
+
+            <h2> div 태그와 span 태그의 차이점 1 : 줄바굼 적용</h2>
+            <p>div 태그는 블럭요소로 한 줄 단위로 영역차지 (이미 존재하는 태그 다음줄에 영역이 잡힘</p>
+
+            <div style="background-color: chartreuse;">첫번재 영역</div>
+            <div style="background-color: blue;">두번째 영역</div>
+            <div style="background-color: brown;">세번째 영역</div>
+            <h3>span 태그</h3>
+
+            <p> span 태그는 인라인 요소로 content 영역만 차지(줄바꿈이 발생되지 않고 옆으로 영역이 잡힘</p>
+
+            <span style="background-color: burlywood;">첫번째 영역</span>
+            <span style="background-color: blueviolet;">두번째 영역</span>
+            <span style="background-color: coral;">세번째 영역</span>
+
+             <hr>
+             <h2>div 태그와 span 태그의 차이점 2: 영역 지정 방식</h2>
+
+             <h3> div 태그 : 사각형 박스로 영역을 지정 </h3>
+
+             <div style="background-color:yellowgreen ;">설산에서 그들은 그들은 동력은 되려니와, 황금시대다. <br>
+                그들은 설산에서 그들의 때까지 대한 이 철환하였는가? 오직 같으며, 때까지 봄바람이다.<br> 
+                만물은 할지니, 열매를 쓸쓸하랴? 우리의 넣는 아니더면, 소금이라 않는 운다.<br>
+                
+
+            <h3>span 태그 : 문장 단위로 영역을 지정</h3>
+                
+            <span style="background-color: aquamarine;">
+
+            설산에서 그들은 그들은 동력은 되려니와, 황금시대다. <br>
+                그들은 설산에서 그들의 때까지 대한 이 철환하였는가? 오직 같으며, 때까지 봄바람이다.<br> 
+                만물은 할지니, 열매를 쓸쓸하랴? 우리의 넣는 아니더면, 소금이라 않는 운다.<br>
+                 소담스러운 있으며, 만물은 위하여서, 가치를 끓는 곳으로 두기 군영과 사막이다.<br>
+                  이상을 이 아름답고 청춘의 것이다.<br>
+                   되는 청춘 용감하고 무엇을 봄날의 밥을 그들에게 있는가? 행복스럽고 같으며, <br>
+                   황금시대의 사막이다. 갑 가슴이 얼음에 고동을 듣는다.<br></span>
+
+            </span>
+                
+            <hr>
+
+            <h1>iframe</h1>
+            <p>웹 문서안에 다른 웹 페이지를 추가하는 태그 (인라인요소)</p>
+
+            <iframe src="04_이미지및 멀티미디어관련태그.html" width="600" height="800" frameborder="0"></iframe>
+
+            <iframe width="1135" height="753" src="https://www.youtube.com/embed/POYLCr17a-o?list=RDPOYLCr17a-o" title="가스라이팅, 그에 반하여🔥: AURORA - Cure For Me (2021) [가사해석/번역]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</body>
+
+</html>

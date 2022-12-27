@@ -3,6 +3,31 @@
 <html>
     <head>
         <title>연습문제1</title>
+        <style>
+        #i{
+            background-color:skyblue;
+            color: white;
+            border-color :darkgrey;
+        } 
+        #h1{
+            background-color: lightpink;
+            color: aliceblue;
+        }
+        #b1{
+            background-color:yellow;
+        }
+        #f1{
+            background-color: red;
+            color: blue;
+        }
+        #c1{
+            color: red;
+        }
+        </style>
+        
+    
+    
+    
     </head>
 
     <body>
@@ -45,6 +70,105 @@
             
 
         </ul>
+
+        <br><br><br><hr><br><br>
+
+       
+
+        <table border="1">
+             <caption id="c1" align="center"><b>KH 정보교육원 강의<br><br></b></caption>
+            <thead id ="h1" align="center">
+                <tr>
+                    <td><b>관</b></td>
+                    <td><b>강의장</b></td>
+                    <td><b>인원수</b></td>
+                    <td><b>강의명</b></td>
+                </tr>
+            </thead>
+            
+            <tbody id="b1">
+                <tr>
+                    <td rowspan="6">3관</td>
+                    <td rowspan="2">361강의장</td>
+                    <td rowspan="2">30명</td>
+                    <td>오전 : 김시연 <input type="submit" value ="신청하기" id = "i"> </td>
+                </tr>
+                <tr>
+                    <td>오후 : 김시연 <input type="submit" value ="신청하기" id = "i"> </td>
+                </tr>
+                <tr>
+                    
+                    <td rowspan="2">362강의장</td>
+                    <td  rowspan="2">23명</td>
+                    <td>오전 : 김동현 <input type="submit" value ="신청하기" id = "i"></td>
+
+                </tr>
+                <tr>
+                    <td>오후 : 김동현 <input type="submit" value ="신청하기" id = "i"></td>
+
+                </tr>
+                <tr>
+                   
+                    <td rowspan="2">363강의장</td>
+                    <td  rowspan="2">27명</td>
+                    <td>오전 : 문인수 <input type="submit" value ="신청하기" id = "i"></td>
+                    
+                </tr>
+                <tr>
+                    <td>오후 : 문인수 <input type="submit" value ="신청하기" id = "i"></td>
+                </tr>
+
+                
+            </tbody>
+
+            <tfoot id ="f1">
+                <tr align="center">
+                    <td colspan="4"><b>많이 신청해주세요!</b></td>
+                </tr>
+            </tfoot>
+
+        </table>
+
+
+        <br><br><br><hr><br><br><br>
+
+        <form action="search.do" method="post">
+            <fieldset>
+                <legend>제품주문</legend>
+                <table border="1">
+                    <tr align="center">
+                        <td><b>* 주문자명</b></td>
+                        <td><input type="text" name="text1" placeholder="이름을 입력하시오." ></td>
+                    </tr>
+
+                    <tr align="center">
+                        <td><b>* 비밀번호</b></td>
+                        <td><input type="text" name="text2" placeholder="비밀번호 입력하시오." ></td>
+                    </tr>
+
+                    <tr align="center">
+                        <td><b>* 제품수량</b>
+                        </td>
+                        <td><input type="text" name="text3" placeholder="제품수량 입력하시오." ></td>
+                    </tr>
+
+                    <tr align="center">
+                        <td><b>배송시 요청사항</b></td>
+                        <td><input type="text" name="text4" placeholder="요청사항 입력하시오." ></td>
+                    </tr>
+
+                    
+                    
+                </table>
+                <br>
+                <input type="submit" value="주문">
+                <input type="reset" value="초기화">
+            </fieldset>
+        </form>
+
+
     </body>
+
+    
 
 </html>

@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 
+<head>
+
+</head>
+
+<body>
+    
 <html>
     <table border = "1" align="center" >
         <caption> &lt; Product &gt; </caption>
@@ -38,5 +44,90 @@
 
     </table>
 
+    <br> <hr>
+    <!--
+        셀 (th, td) 태그의 속성을 이용해서 행 또는 열을 합칠 수 있음
 
+        colspan = "2" : 2개의 열을 합치기
+        rowspqn = "2" : 2개의 행을 합치기
+    -->
+    </html>
+    <h3> 이력서 </h3>
+
+    <table border = "1">
+        <tr>
+            <td colspan="2" rowspan="2">123456789</td>
+            <td colspan="2">123456789</td>
+            <td colspan="2">12345678</td>
+            
+        </tr>
+        <tr>
+            <td>123456789</td>
+            <td>123456789</td>
+
+        </tr>
+        <tr>
+            <td>123456789</td>
+            <td colspan ="3">123456789</td>
+        </tr>
+        <tr>
+            <td>123456789</td>
+            <td colspan= "3" rowspan="2">123456789</td>
+            
+        </tr>
+        
+    </table>
+    <h3> 실습문제 </h3>
+    <table border = "1">
+        <tr>
+            <td colspan="5" align="center"><b>하수정 보석 컬렉션</b></td>
+           
+        </tr>
+
+        <tr>
+            <td rowspan="5">제품리스트</td>
+            <td>코드</td>
+            <td>분류</td>
+            <td>가격</td>
+            <td>구매가능 개수</td>
+        </tr>
+
+        <tr>
+            <td>01-468</td>
+            <td>가을</td>
+            <td>200,000원</td>
+            <td>1068</td>
+        </tr>
+
+        <tr>
+            <td>01-469</td>
+            <td>가을</td>
+            <td>150,000원</td>
+            <td>1700</td>
+        </tr>
+
+        <tr>
+            <td>01-470</td>
+            <td>여름</td>
+            <td>950,000원</td>
+            <td>2500</td>
+        </tr>
+
+        <tr>
+            <td>01-471</td>
+            <td>봄</td>
+            <td>120,000원</td>
+            <td>3200</td>
+        </tr>
+
+        <tr>
+            <td colspan="3">총합</td>
+
+            <td>1,420,000원</td>
+            <td>8468</td>
+        </tr>
+
+    </table>
+    
+</body>
 </html>
