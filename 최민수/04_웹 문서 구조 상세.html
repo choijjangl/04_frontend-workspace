@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹 구조 문서 상세</title>
+    <style>
+    div{box-sizing: border-box;border: 1px solid red}
+
+    .wrap{
+        width: 1000px;
+        height: 800px;
+        margin:auto;
+    }
+
+    .wrap>div{
+        width: 100%;
+    }
+
+    #header, #footer{
+        height: 20%;
+    }
+
+    #navigator{
+        height: 5%;
+    }
+    #content{
+        height: 55%;
+    }
+
+    #content>div, #header>div{
+        float: left;
+        height: 100%;
+    }
+    
+    #h1{width:20% ;}
+    #h2{width: 65%;}
+    #h3{width: 15%;}
+
+    #c1{width: 15%;}
+    #c2{width: 60%;}
+    #c3{width: 25%;}
+
+    #navigator>ul{
+        list-style: none;
+    }
+
+    #navigator>ul>li{
+        float: left;
+        padding-right: 10px;
+        text-decoration: none;
+    }
+    #u1>li>a{
+        text-decoration: none;
+        color: green;
+        font-weight: 1000;
+
+    }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+
+        <div id="header">
+            <div id="h1"></div>
+            <div id="h2"></div>
+            <div id="h3"></div>
+        </div>
+        <div id="navigator">
+            <ul id="u1">
+                <li id="l1"><a href="http://mail.naver.com">메일</a></li>
+                <li id="l2"><a href="http://cafe.naver.com">카페</a></li>
+                <li id="l3"><a href="http://blog.naver.com">블로그</a></li>
+                <li id="l4"><a href="http://comic.naver.com">웹툰</a></li>
+                <li id="l5"><a href="http://kin.naver.com">지식</a></li>
+            </ul>
+
+        </div>
+        <div id="content">
+            <div id="c1"></div>
+            <div id="c2"></div>
+            <div id="c3"></div>
+        </div>
+        <div id="footer"></div>
+
+    </div>
+</body>
+</html>

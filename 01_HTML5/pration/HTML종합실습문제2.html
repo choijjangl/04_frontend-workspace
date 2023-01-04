@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <head>
+        <meta charset="UTF-8"> <!-- 종료태그 없음-->
+        <meta name="generator" content="VScode"> <!-- genertor : 이 문서를 생성한 프로그램-->
+        <meta name="author" content="choijjang"> <!-- author : 이 문서의 저자-->
+        <meta name="description" content="이 문서는 글자관련된 태그들을 공부하는 문서입니다.">
+        <title></title> <!--title을 달면 탑에 있는 제목이 바뀜-->
+    </head>
+</head>
+
+<body>
+    <form action="test.do">
+
+
+        <fieldset>
+            <legend>납품자 정보</legend>
+            <ol>
+
+                <table>
+
+
+
+                    <tr>
+                        <td>
+                            <li>납품자명 : </li>
+                        </td>
+                        <td><input type="text" name="userName" id="userName" placeholder="name"></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <li>email : </li>
+                        </td>
+
+                        <td>
+                            <input type="email" name="userEmail" id="userEmail" placeholder="answs@naver.com">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <li>홈페이지 : </li>
+                        </td>
+                        <td>
+                            <input type="url" name="url" id="url" value="http://www.">
+                        </td>
+                    </tr>
+
+                </table>
+            </ol>
+
+        </fieldset>
+        <fieldset>
+
+            <legend>납품정보</legend>
+
+            <table>
+                <tr>
+                    <td>
+                        <li>상품명 :</li>
+                    </td>
+                    <td><input type="text" name="pName" id="pName"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <li>납품수량 :</li>
+                    </td>
+                    <td><input type="number" name="stock" id="stock" placeholder="최소 100" min="100"></td>
+                </tr>
+                <tr>
+
+                </tr>
+                <tr>
+                    <td>
+                        <li>납품등급 :</li>
+                    </td>
+                    <td> <input type="range" name="grade" min="0" max="5"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <li>기타사항 :</li>
+                    </td>
+                    <td><textarea name="etc" id="etc" cols="30" rows="10"></textarea></td>
+                </tr>
+
+            </table>
+
+        </fieldset>
+        <input type="submit">
+
+
+
+
+
+
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html>	
+		<head>
+            <head>
+                <meta charset="UTF-8"> <!-- 종료태그 없음-->
+                <meta name = "generator" content = "VScode"> <!-- genertor : 이 문서를 생성한 프로그램-->
+                <meta name = "author" content = "choijjang"> <!-- author : 이 문서의 저자-->
+                <meta name = "description" content="이 문서는 글자관련된 태그들을 공부하는 문서입니다.">
+                <title></title> <!--title을 달면 탑에 있는 제목이 바뀜-->
+            </head>
+		</head>
+			
+		<body>
+            <h1>회원가입</h1>
+            <form action="test.do">
+
+                <fieldset>
+           <fieldset>
+                <legend>필수 입력 사항</legend>
+                
+                <table>
+                    <tr>
+                        <th><b>ID</b></th>
+                        <td><input type="text" name="id" id="id" max="10"placeholder="아이디 10글자 이내"size="30"></td>
+                        <td><input type="submit" value="중복 확인"></td>
+                    </tr>
+
+                    <tr>
+                        <th><b>비밀번호</b></th>
+                        <td><input type="password"name="pwd"id=""placeholder="영문, 숫자, 특수문자 포함 8자 이상"min="8"size="30"></td>
+                    </tr>
+                    <tr>
+                        <th><b>비밀번호 확인</b></th>
+                        <td><input type="password"name="again"id="again"size="30"></td>
+                    </tr>
+                    <tr>
+                        <th><b>Email</b></th>
+                        <td><input type="email" name="id" id="email"size="30"></td>
+                        <td><select name="email" id="email">
+                            <option value=""selected>직접입력</option>
+                            <option value="@naver.com">네이버</option>
+                            <option value="@gmail.com">구글</option>
+                            <option value="@daum.net">다음</option>
+                        </select></td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <fieldset>
+                <legend>추가 정보</legend>
+                프로필사진 : <input type="file" value="파일 선택" >
+
+                <br><br><br>
+                성별 : 
+                <input type="radio" id="radiom" name="gender" value="M">
+                <label for="gender">남자</label>
+                <input type="radio" id="radiog" name="gender" value="F">
+                <label for="gender">여자</label>
+                <br><br>
+
+                생년월일 : 
+                <input type="date" name ="생년월일">
+                <br><br>
+                
+                취미 <br>
+                <input type="checkbox"id="baseball" name="baseball" value="baseball">
+                <label for="baseball">야구</label>
+                
+                <input type="checkbox"id="basketball" name="basketball" value="basketball">
+                <label for="basketball">농규</label>
+                
+                <input type="checkbox"id="football" name="football" value="football">
+                <label for="football">축구</label>
+                <br>
+                <input type="checkbox"id="study" name="study" value="study">
+                <label for="study">공부</label>
+                
+                <input type="checkbox"id="music" name="music" value="music">
+                <label for="music">음악감상</label>
+                
+                <br>
+                <input type="checkbox"id="other" name="other" value="other">
+                <label for="other">기타</label>
+                <input type="text"id="other" name="other">
+                
+                <br><br>
+                자기소개<br>
+                <textarea name="me" id="me" cols="60" rows="20"></textarea>
+
+
+            </fieldset>
+            <br>
+            <table>
+            <td>
+            <input type="submit"name="ok" id="ok" value="회원가입">
+            <input type="reset" name="reset" id="reset" value="다시입력">
+            <input type="submit"value="이전으로">            
+            </td>
+            </table>
+    </form>
+		</body>
+
+        </fieldset>
+</html>

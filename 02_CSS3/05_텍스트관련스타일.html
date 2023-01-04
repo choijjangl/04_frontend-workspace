@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트 관련 스타일</title>
+    <style>
+        #c {
+            /* 이거 중요 */
+            color: red;
+            /* 색상명 */
+            color: #3c6897;
+            /* 16진수, 클릭시 색상 지정 가능 */
+            color: rgb(50, 190, 129);
+            /* rgb의 최대 값 255 */
+            color: rgba(120, 222, 121, 0.7);
+            /* 0~1 사이의 값으로 투명, 불투명  */
+            color: hsl(200, 50%, 50%);
+            /* h : 색상값(0~360), s: 채도(%), l: 명도(%) */
+            color: hsla(200, 50%, 50%, 0.8);
+        }
+
+        #td1 {
+            text-decoration: underline;
+        }
+
+        #td2 {
+            text-decoration: line-through;
+        }
+
+        #td3 {
+            text-decoration: overline;
+        }
+
+        #td4 {
+            text-decoration: none;
+        }
+
+        /* 이거 중요 */
+
+        #tt1 {
+            text-transform: uppercase;
+        }
+
+        #tt2 {
+            text-transform: lowercase;
+        }
+
+        #tt3 {
+            text-transform: capitalize;
+        }
+
+        /* 공백을 기준으로 한 단어로써 인식 */
+
+        .shadow {
+            font-size: 50px;
+            font-weight: 900;
+        }
+
+        #ts1 {
+            color: red;
+            text-shadow: 5px -5px 5px black;
+            /* 번짐정도 생략시 기본적으로는 선명한 그림자, 색상 */
+        }
+
+        #ts2 {
+            color: white;
+            text-shadow: 0px 0px 10px yellowgreen;
+        }
+
+        #ts3 {
+            text-shadow: 0px 0px 4px gray, 0px -5px 4px yellow, 0px -10px 8px orange, 0px -15px 15px orangered, 0px -22px 20px red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>텍스트 관련 스타일 (text~)</h1>
+
+    <h3>color : 텍스트의 색상을 지정</h3>
+
+    <pre id="c">
+        선택자 {
+            color : 색상명 | 16진수 | rgb(x,x,x) | rgba(x,x,x,투명도) | hsl(x,x,x) | hsla(x,x,x,투명도);
+        }
+    </pre>
+
+    <hr>
+
+    <h3>text-decoration : 텍스트에 줄을 긋거나 없앨 때 사용</h3>
+    <pre>
+        선택자{
+            text-decoration : none | underline | overline | line-through
+        }
+    </pre>
+
+    <!--ul>li#td$*3-->
+    <ul>
+        <li id="td1"> 택스트 영역 아래 줄 긋기</li><br>
+        <li id="td2"> 텍스트 영역 중간에 줄 긋기 </li><br>
+        <li id="td3"> 텍스트 영역 위에 줄 긋기</li><br>
+    </ul>
+
+    <!-- 페이지를 이동시키는 태그 하이퍼링크 -->
+    <a id="td4" href="http://www.naver.com" target="_blank">네이버</a> <!-- none 하이퍼링크의 줄이 없어짐 -->
+
+    <hr>
+
+    <h3>text-transform : 영문 텍스트의 대소문자 변환시 사용</h3>
+
+    <pre>
+        선택자{
+            text-transform : uppercase | lowcase | capitalize
+        }
+    </pre>
+
+    <ol type="a" start="5">
+        <li id="tt1">uppercase : 텍스트 대문자 변환</li>
+        <li id="tt2">LowerCase : 텍스트 소문자 변환</li>
+        <li id="tt3">capitalize : 영문자의 firsttext만 대문자 변환</li>
+    </ol>
+
+    <hr>
+
+    <h3>text-shadow : 텍스트에 그림자 효과를 줄때 사용한다.</h3>
+    <pre>
+        선택자 {
+            text-shadow : (가로거리) x (세로거리) y [번짐정도] [색상]   
+        }
+    </pre>
+
+    <!-- div span 3개 클래스명 shadow id ts1,2,3 -->
+
+
+    <!-- div>span.shadow#ts${HTML}*3 -->
+
+    <div>
+        <span class="shadow" id="ts1">HTML</span> <br> <br>
+        <span class="shadow" id="ts2">HTML</span><br><br>
+        <span class="shadow" id="ts3">HTML</span><br><br>
+    </div>
+
+    <hr>
+S
+    <h3>text-align : 텍스트를 정렬할 때 사용</h3>
+    <pre>
+        선택자{
+            text-allgn : left(기본값) | justify(양쪽정렬) | right | center
+        }
+    </pre>
+
+    <h4>왼쪽정렬(기본값)</h4>
+    <p style="text-align : left">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem vero, sapiente fugiat consequatur dolorem alias ratione dicta illo. Accusantium illum repellendus, harum earum quibusdam doloremque ipsam possimus est laboriosam odio.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum distinctio voluptatem eius, harum esse deleniti beatae quae aliquam quis et modi nesciunt sunt dolorem ex, non vero omnis laudantium illo?
+    </p>
+    
+    <h4>양쪽정렬</h4>
+    <p style="text-align: justify;">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde, quo commodi officiis iure voluptatem quia quaerat temporibus alias consequatur enim quam mollitia, corrupti, adipisci nulla! At ducimus est eos eveniet.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa sequi possimus vitae dolorum quibusdam consequatur ut, ex enim eos est, delectus recusandae, odio facilis quas beatae aperiam praesentium culpa cupiditate.
+    </p>
+    
+    <h4>오른쪽정렬</h4>
+    <p style="text-align: right;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus ullam tempore hic ex at, ad natus velit dolorum mollitia fugiat blanditiis et corrupti voluptatum quos, cumque aperiam cupiditate reiciendis corporis!
+    </p>
+
+    <h4>중앙정렬</h4>
+    <p style="text-align: center;">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus omnis odio neque eius, necessitatibus fugiat hic provident quasi dolorem atque totam magni! Temporibus aperiam molestias maiores soluta similique, sunt officiis.
+    </p>
+
+    <hr>
+
+    <h3>line-height : 줄 간격 조정할 때 사용</h3>
+    <pre>
+        선택자{
+            line-height : normal | px | em | % | 
+        }
+    </pre>
+
+    <h4>px 고정 단위 간격</h4>
+    <p style="line-height: 30px;">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti ut molestias asperiores ipsam, architecto voluptate ipsum doloremque quis eligendi mollitia rerum eos. Mollitia est nulla sint voluptatibus, id autem laudantium.
+    </p>
+
+    <h4>em 고정 단위 간격</h4>
+    <p style="line-height: 5em;">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio explicabo nemo aspernatur harum exercitationem eius sequi nisi voluptas beatae, earum odio non quasi reiciendis commodi consectetur. Possimus ipsa praesentium expedita.
+    </p>
+    
+    <h4>% 고정 단위 간격</h4>
+    <p style="line-height: 200%;">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores molestias aliquid unde? Distinctio, vel provident facilis, modi consequuntur esse optio et quaerat, officia odit molestias reiciendis suscipit asperiores molestiae voluptatem.
+    </p>
+    
+    <hr>
+
+</body>
+
+</html>
