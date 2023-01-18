@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>세부_검색창만들기 - h2 </title>
+    <style>
+        div, form{box-sizing: border-box; border: 1px solid red;}
+        #h2{width: 600px; height: 150px; ;} /* 이 스타일은 안가져감*/
+        
+        #h2{position: relative;}/* 기준 */
+        #search_form{
+            width: 80%;
+            height: 20%;
+            
+            margin:auto;
+            position: absolute;
+            /* 공식 땡겨준다는 뜻 
+            네개가 다 귿단으로가려고 해서 가운데 정렬이 됨*/
+            top:0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        #search_form>div{height: 100%;float: left;}
+        #search_text{width: 80%;}
+        #search_btn{width: 20%;}
+/* 
+        #search_text>input{width: 100%; height: 100%; box-sizing: border-box;}
+        #search_btn>input{width: 100%;height: 100%;box-sizing: border-box;}
+     */
+        /* 후손자 선택 */
+        #search_form input{width: 100%;height: 100%; box-sizing: border-box;}
+        
+    
+    </style>
+</head>
+<body>
+
+    <div id="h2">
+        <form id="search_form">
+                <div id="search_text">
+                    <input type="text" name="keyword">
+                </div>
+                <div id="search_btn">
+                    <input type="submit" value="검색">
+                </div>
+        </form>
+    </div>
+
+</body>
+</html>

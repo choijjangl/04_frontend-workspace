@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습문제_10</title>
+    <style>
+        #area{
+            border: 1px solid lightgray;
+            padding: 10px;
+            width: 600px;
+        }
+        div{
+            color: rgb(rgb(182, 180, 180));
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="get" id="area">
+
+        * 아이디 :
+        <input type="text"name="userId" id="userId" required>
+        <br> <div>첫글자는 반드시 영문자로, 그리고 영문자, 숫자 포함하여 총 4~12자로 입력하십시오</div>
+        <br>
+        * 비밀번호 :
+        <input type="password"name="userPwd1"id="userPwd1" required>
+        <br> <div> 영문자, 숫자, 특수문자 포함하여 총 8자~15자로 입력하시오.</div>
+        <br>
+        * 비밀번호 확인 :
+        <input type="password" name="userPwd2" id="userPwd2" required>
+        <br> <div> 영문자, 숫자, 특수문자 포함하여 총 8자~15자로 입력하시오.</div>
+        <br>
+        * 이름 :
+        <input type="text"name="userName"id="userName" required>
+        <br> <div>한글로만 이루어져야되며 2글자 이상으로 입력하시오.</div>
+        <br>
+        * 이메일 :
+        <input type="email"name="email"id="email">
+        <br> <div> 이메일 형식에 맞춰서 입력하시오</div>
+        <br>
+        * 취미 :
+        <input type="text" name="hobby" list="hobby" placeholder="축구, 농구, 야구, 독서 등">
+        <datalist id="hobby">
+            <option value="soccer"></option>
+            <option value="baseketball"></option>
+            <option value="baseball"></option>
+            <option value="reading"></option>
+        </datalist>
+        <br><br>
+        
+        *거주지 :
+        <select name="address" id="address">
+            <option value="seoul" selected>서울</option>
+            <option value="incheon">인천</option>
+            <option value="busan">부산</option>
+        </select>
+        <br><br>
+        <button type="submit" onclick="return test();">회원가입</button>
+        <button type="reset">취소</button>
+    
+    </form>
+
+    <script>
+        function test(){
+            let userId= document.getElementById("userId").value;
+            let userPwd1= document.getElementById("userPwd1").value;
+            let userPwd2= document.getElementById("userPwd2").value;
+            let userName= document.getElementById("userName").value;
+            let email= document.getElementById("email").value;
+            
+            let regExp = /^[a-z][a-z0-9]{4,12}$/i;
+            if(!(regExp.test(userId))){
+                alert("아이디가 잘못 입력되었습니다."); 
+                document.getElementById(userId).select();
+                return false;  
+            }
+            
+            regExp = /^[a-z0-9!@?#$%^&*]{8,15}$/
+            if(!(regExp.test(userPwd1))){
+                alert("비밀번호를 잘못 입력하였습니다.");
+                document.getElementById(userPwd1).select();
+                return false;
+            }
+
+            if(userPwd1!=userPwd2){
+                alert("서로의 비밀번호가 틀립니다.");
+                document.getElementById(userPwd2).select();
+                return false;
+            }
+            
+            regExp = /^[가-힣]{2,}$/;
+            if(!(regExp.test(userName))){
+                alert("이름을 잘못입력하였습니다..");
+                document.getElementById(userName).select();
+                return false;
+            }
+
+            regExp= /^[\w]@[a-z][.][a-z]$/;
+            if(regExp.test(email)){
+                alert("잘못된 이메일입니다.");
+                document.getElementById(email).select();
+                return false;
+            }
+
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열실습문제33</title>
+</head>
+<body>
+    <fieldset>
+        <legend>입력</legend>
+        <input type="text" id="input1">
+        <button onclick="test();">입력</button>
+    </fieldset>
+
+    <br>
+    <div id="answer">정답</div>
+
+    <script>
+        let arr = []; // 전역 변수를 해야 초기화가 안됨.
+        function test(){
+            let input1 = document.getElementById("input1");
+            let answer = document.getElementById("answer");
+
+            arr.push(input1.value);
+            input1.value = "";
+            
+           answer.innerHTML = arr;
+        }
+    </script>
+</body>
+</html>

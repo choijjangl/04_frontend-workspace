@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습</title>
+    <style>
+        div, img{box-sizing: border-box; }
+        .wrap{
+            width: 1000px;
+            height: 800px;
+            margin:auto;
+        }
+        .wrap>div{
+            width: 100%;
+        }
+
+        #header{
+            height: 20%;
+        }
+        #navigator{
+            height: 5%;
+        }
+        #content{
+            height: 60%;
+        }
+        #footer{
+            height: 15%;
+        }
+
+        #header>div, #content>div{
+            float:left;
+            height: 100%;
+        }
+
+        #h1,#h3{width:20%;box-sizing: border-box;}
+        #h2{width:60%;}
+
+        #c1{width:20%;}
+        #c2{width:55%;} 
+        #c3{width:25%;}
+
+        #
+        #c2_top, #c2_btm{height: 50%;}
+        #c2_top>div, #c2_btm>div{
+            float: left;
+            height: 100%;
+            width: 50%;
+        }
+
+      
+
+        #c2 img{
+            width: 100%;
+            height: 90%;
+            padding: 5px 10px;
+        }
+        #c2 p{
+            text-align: center;
+            font-size: 13px;
+        }
+
+        #header img{
+            padding-top: 20px;
+            width: 100%;
+            height:80%;
+        }
+
+        #c1>img{
+            width: 100%;
+            height: 100%;
+            padding: 5px 10px;
+        }
+
+        #footer{
+            text-align: center;
+            line-height: 100px;
+        }
+
+        #navi{
+            height: 100%;
+            width: 100%;
+            background-color: rgb(25, 189, 25);
+        }
+        
+        #navi li{
+            width: 25%;
+            float: left;
+            text-align: center;
+            list-style: none;
+        }
+
+        #navi a{
+            color: white;
+            margin: 0;
+            padding :0;
+            font-weight: 500;
+            font-size: 15px;
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+            line-height: 38px;
+        }
+
+        #login_form{
+            height: 25%;
+        }
+
+        #c3_img_1{
+            height: 50%;
+            margin-bottom: 10px;
+        }
+
+        #c3_img_2{
+            height: 25%;
+        }
+
+        #login_form_input{height: 50%;}
+        #login_form_input>div{
+            float: left;
+            height: 100%;
+            margin-top: 5px;
+        }
+
+        #login_input_id_pwd{width:65%}
+        #login_input_btn{
+            width: 35%;
+        }
+
+        #login_form_etc{
+            width: 100%;
+            text-align: center;   
+        }
+
+        #login_form_etc>a{
+            text-decoration: none;
+            font-size: 12px;
+            color: rgb(61, 60, 60);
+            margin: 10px;
+            vertical-align: middle;
+        }
+
+        #login_input_id_pwd>input{width: 100%; height: 50%;box-sizing: border-box;}
+        #login_input_btn>input{width: 100%;height: 100%;
+            display: block;
+            padding:10px;
+        }
+
+        #c3_img_2, #c3_img_3{
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        #c3_img_2 img, #c3_img_1 img{
+            box-sizing: border-box;
+            height: 100%;
+            width: 100%;
+        }
+
+</style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div id="header">
+            <div id="h1">
+                <img src="image/logo.jpg" alt="">
+            </div>
+            <div id="h2">
+                <img src="image/mainlogo.jpg" alt="">
+            </div>
+            <div id="h3"></div>
+        </div>
+        <div id="navigator">
+            <div id="navi">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Profile</a></li>
+                    <li><a href="">Board</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="content">
+            <div id="c1">
+                <img src="image/left_img.jpg" alt="">
+            </div>
+            <div id="c2">
+                
+                <div id="c2_top">
+                    <div id="c2_img_1">
+                        <img src="image/main_img1.jpg" alt="">
+                        <p>나무를 심는 사람들</p>
+                    </div>
+                    <div id="c2_img_2">
+                        <img src="image/main_img2.jpg" alt="">
+                        <p>아이들에게 녹색미래를..</p>
+                    </div>
+                </div>
+                
+                <div id="c2_btm">
+                    <div id="c2_img_3">
+                        <img src="image/main_img3.jpg" alt="">
+                        <p>설악산을 살리는 길</p>
+                    </div>
+                    <div id="c2_img_4">
+                        <img src="image/main_img4.jpg" alt="">
+                        <p>사라지는 북극곰들</p>
+                    </div>
+                </div>
+            </div>
+            <div id="c3">
+                <div id="login_form">
+                    <form action="" id="login_form_input">
+                        <div id="login_input_id_pwd">
+                            <input type="text">
+                            <input type="password">
+                        </div>
+                        <div id="login_input_btn">
+                            <input type="submit" value="로그인">
+                        </div>
+                        <div id="login_form_etc">
+                            <a href="#">회원가입</a>
+                            <a href="#">ID/PWD 찾기</a>                        
+                        </div>
+                    </form>
+                </div>
+                <div id="c3_img_1">
+                    <img src="image/right_img.jpg" alt="">
+                </div>
+                <div id="c3_img_2">
+                    <img src="image/me_chat.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div id="footer">ⓒExample from JAVA Web Developer Junior</div>
+    </div>
+</body>
+
+</html>

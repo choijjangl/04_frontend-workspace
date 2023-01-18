@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습문제6</title>
+</head>
+<body>
+
+        <fieldset>
+            <legend>보기</legend>
+            <label for="" id="la1">사과, 바나나, 당근</label><br>
+            <label for="" id="la2">김밥, 치즈, 떢볶이</label><br>
+            <label for="" id="la3">환타, 사이다, 콜라</label><br>
+            <label for="" id="la4">고양이, 강아지</label><br>
+
+            
+        </fieldset>
+        <input type="text" id="input1" placeholder="찾을 문자열을 입력하세요"> <br>
+        <button onclick="inputTest();">전송 및 처리</button>
+
+    <script>
+    function inputTest(){   
+        const inputEl = document.getElementById("input1").value;
+
+        const laAll = la1.innerHTML + ", " + la2.innerHTML + ", " + la3.innerHTML + ", " + la4.innerHTML;
+        const arr = laAll.split(", ");
+        const index = arr.indexOf(inputEl);
+        console.log(index);
+        console.log(arr);
+        console.log(laAll);
+            if(index == -1){
+                return alert("존재하지 않습니다.");
+            }else{
+                return alert(arr[index] + "는 배열 index " + index +"번째에 존재합니다.");
+            }
+        }
+    
+    </script>
+</body>
+</html>

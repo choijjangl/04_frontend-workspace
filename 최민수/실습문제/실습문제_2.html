@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습문제_2</title>
+<!-- CSS -->
+    <style>
+        div{box-sizing: border-box;}
+
+        .wrap{
+            width: 1000px;
+            height: 800px;
+        }
+
+        #header{
+            width: 100%;
+            height: 20%;
+            border: 0.1mm solid rgb(197, 194, 194);
+            margin: 5px 0px;
+        }
+        #navigator{
+            border: 0.1mm solid rgb(197, 194, 194);
+            width: 100%;
+            height: 5%;
+            margin-bottom: 5px;
+        }
+        #content{
+            width: 100%;
+            height: 55%;
+            margin-bottom: 25px;
+        }
+        #footer{
+            border: 0.1mm solid rgb(197, 194, 194);
+            width: 100%;
+            height: 20%;
+        }
+        #header>div{height: 100%;float: left;}
+        #header_1{width: 25%;padding:50px;}
+        #header_2{width: 50%; position: relative;}
+        #header_3{width: 25%;}
+        
+        #header_1>img{width: 100%; height: 100%;}
+        
+        #header_2>form{  
+            width: 80%;
+            height: 25%;
+            margin:auto;
+            position: absolute;
+            top:0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        
+        #search{box-sizing: border-box;}
+        #search_form>div{float: left;height: 100%;}
+        #search_form input{
+            height: 100%; width: 100%;
+            box-sizing: border-box;
+        }
+        #search_input{width: 85%;}
+        #search_btn{width: 15%;}
+        #search_btn>button{ 
+            height: 100%;
+            width: 100%;
+            border: 1px solid rgb(197, 194, 194);
+        }
+
+        #search_btn img{
+            box-sizing: border-box;
+            display: block;
+            width: 100%;
+            height: ;
+        }
+        
+        #navigator>div{height: 100%;}
+        #navi{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;}
+        #navi>li{
+            float: left;
+            width: 20%;
+            height: 100%;
+            text-align: center;
+        }
+        #navi a{
+            text-decoration: none;
+            color: rgb(170, 167, 167);
+            font-size: 18px;
+            font-weight: 900;
+            width: 100%;
+            height: 100%; 
+            display: block; 
+            line-height: 35px;
+        }
+
+
+        #content>div{float:left; height: 100%;margin-bottom: 10px;}
+        #content>#content_1{height: 25%;width: 100%;margin-right: 5px;}
+        #content>#content_2{height: 75%; width: 100%;}  
+        #content_1>div{height: 100%; float:left;}
+        
+        #content_1_1{padding-right: 5px; width: 70%;}
+        #content_1_2{width: 30%; border: 0.1mm solid rgb(197, 194, 194);}
+        #content_1_1>img{
+            height: 100%; 
+            width: 100%;
+            border: 0.1mm solid rgb(197, 194, 194);
+        }
+        #content_2>div{height: 100%; float: left;}
+        
+        #content_2_1{width: 70%;}
+        #content_2_2{padding: 5px 0px 0px 5px;}
+        
+        #content_2_1>div{width: 100%; float: left;}
+        #content_2_1_1{
+            float: left;
+            height: 20%; 
+            width: 100%;
+            border: 0.1mm solid rgb(197, 194, 194);
+        }
+    
+        #content_2_1_2{
+            height: 80%;
+            padding: 10px 5px 0px 0px;
+        }
+        #content_2_1_2>img{
+            border: 0.1 solid rgb(197, 194, 194);
+        }
+        
+        #content_2_1_1>div{height: 100%;float: left;}
+        #c_2_1_1_1{width: 80%;height: 100%;}
+        #c_2_1_1_2{width: 20%;height: 100%;}
+        #c_2_1_1_1{line-height: 40px;}
+        #c_2_1_1_2>#cu{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        #cu a{text-decoration: none;
+            color: black;
+        }
+        #cu>li{
+            float: left;
+            width: 33%;
+            height: 100%;
+            text-align: center;
+            line-height: 60px;
+            list-style: none;
+        }
+
+        #login_form{width: 100%; height: 30%; border: 0.1 solid rgb(197, 194, 194);}
+        #login_form>*{width: 100%;}
+        #login_form_input{height:80%;}
+        #login_form_etc{height: 20%; text-align: center;}
+        
+        #login_form_input>div{height: 100%;float: left;}
+        #login_input_id_pwd{width: 65%;}
+        #login_input_btn{width: 35%;}
+        
+        #login_form_etc>a{
+            text-decoration: none;
+            color: rgb(61, 60, 60);
+            font-size: 12px;
+            margin: 5px;
+            vertical-align: middle;
+        }
+        #login_input_id_pwd>input{width: 100%; height: 50%;box-sizing: border-box;}
+        #login_input_btn>input{width: 100%;height: 100%;}
+        
+        #content_2_1_2>img{height: 100%; width: 100%; border: 0.1mm solid rgb(197, 194, 194);}
+        #content_2_2>img{
+            height: 100%;
+            width: 100%;
+            border: 0.1mm solid rgb(197, 194, 194);
+        }        
+
+        #footer_1{
+            height: 25%;
+        }
+        #footer_2{
+            height: 75%;
+        }
+        #footer_1>a{
+            text-decoration: none;
+            color: rgb(59, 55, 55);
+            font-weight: 600;
+            margin: 10px;
+            vertical-align: middle;
+        }
+
+        #footer_2>p{
+            width: 100%;
+            box-sizing: border-box;
+            margin: 0;
+            font-size: 12px;
+            color: rgb(107, 102, 102);
+        }
+
+        #p1 {height: 80%; padding: 25px 20px;}
+        #p2 {height: 20%; text-align: center;}
+    
+        
+    </style>
+
+    
+</head>
+<body>
+    <!-- 전체 -->
+    <div class="wrap">
+        
+        <div id="header">
+            <div id="header_1">
+                <img src="image/logo.PNG" alt="">
+            </div>
+            <div id="header_2">
+              <form id="search_form">
+                <div id="search_input">
+                    <input type="text" name="keyword">
+                </div>
+                <div id="search_btn">
+                    <button type="submit" src><img id="search" src="image/search.png" style="box-sizing: border-box;"></button>
+                </div>
+              </form>
+            </div>
+            <div id="header_3"></div>
+        </div>
+        <div id="navigator">
+            <ul id="navi">
+                <li><a href="#">교육과정</a></li>
+                <li><a href="#">교육원소개 </a></li>
+                <li><a href="#">취업지원센터 </a></li>
+                <li><a href="#">신학업계 </a></li>
+                <li><a href="#">상담센터 </a></li>
+            </ul>
+        </div>
+        <div id="content">
+            <div id="content_1">
+                <div id="content_1_1">
+                    <img src="image/banner.PNG" alt="">
+                </div>
+                <div id="content_1_2">
+                    <form action="method" id="login_form_input">
+                        <div id="login_input_id_pwd">
+                            <input type="text" name ="userId" placeholder="아이디를 입력해주세요" required>
+                            <input type="password" name="userPwd" placeholder="비밀번호를 입력해주세요" required>
+                        </div>
+                        <div id="login_input_btn">
+                            <input type="submit" value="로그인">
+                        </div>
+                    </form>
+            <div id="login_form_etc">
+                <a href="#">아이디</a> |
+                <a href="#">비밀번호찾기</a> |
+                <a href="#">회원가입</a>
+            </div>
+                </div>
+            </div>
+            <div id="content_2">
+                <div id="content_2_1">
+                    <div id="content_2_1_1">
+                        <div id="c_2_1_1_1">
+                            <pre>    안녕하세요 여기는 공지 사항 제목이 들어오는 자리입니다.</pre>
+                        </div>
+                        <div id="c_2_1_1_2">
+                            <ul id="cu">
+                                <li><a href="#">경제</a></li>
+                                <li><a href="#">연애</a></li>
+                                <li><a href="#">사회</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="content_2_1_2">
+                        <img src="image/car.PNG" alt="">
+                    </div>
+                </div>
+                <div id="content_2_2">
+                    <img src="image/shopping.PNG" alt="">
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+
+            <div id="footer_1">
+                <a href="#">이용약관</a> |
+                <a href="#">개인정보취급방침</a> |
+                <a href="#">인재채용</a> |
+                <a href="#">고겍센터</a>
+            </div>
+    
+            <div id="footer_2">
+                <p id="p1"> 
+                    강남지원 1관 : 서울특별시 강남구 테헤란로14길 6 남도빌딩 2F, 3F, 4F, 5F, 6F <br>
+                    강남지원 2관 : 서울특별시 강남구 테헤란로10길 9 그랑프리 빌딩 4F, 5F, 7F <br>
+                    강남지원 3관 : 서울특별시 강남구 테헤란로 130 호산빌딩 5F, 6F <br>
+                </p>
+                <p id="p2">
+                    Copyright © 1998-2023 KH Information Educational Institute All Right Reserved
+                </p>
+            </div>
+    
+    
+        </div>
+    
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열실습문제_2</title>
+    <style>
+        div{
+            border: 1px solid red;
+            height: 15px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>배열 실습 문제2</h1>
+    <fieldset>
+        <label id="str1">r b</label><br>
+        <label id="str2">e v o l</label><br>
+    </fieldset>
+    <br>
+    <div id="answer"></div>
+    <button onclick="test();">처리</button>
+
+    <script>
+        function test(){
+            let str = "";
+          
+            // console.log(str);
+            let arr1 = document.getElementById("str1").innerHTML.split(" ");
+            arr1.reverse();
+
+            arr2 = document.getElementById("str2").innerHTML.split(" ");
+            arr2.reverse();
+
+            const answer = document.getElementById("answer")
+            let arr = arr1.concat(arr2);
+            answer.innerHTML = "";
+            
+            for( let i in arr){
+                answer.innerHTML += arr[i];
+            }
+
+        }
+    </script>
+</body>
+</html>

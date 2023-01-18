@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습문제_6</title>
+
+
+</head>
+<body>
+    <h1>배열 실습문제</h1>
+    <fieldset>
+        <legend>보기</legend>
+        <lable id="la1">사과,바나나,당근</lable> <br>
+        <lable id="la2">김밥,치즈,떡볶이,햄버거</lable><br>
+        <lable id="la3">환타,사이다,콜라</lable><br>
+        <lable id="la4">고양이,강아지</lable>
+    </fieldset>
+    <br>
+    <input type="text" id="findInput" placeholder="찾을 문자열을 입력하세요">
+    <br>
+    <button onclick="test();">전송 및 처리</button>
+
+    <script>
+        function test(){
+            //변수 초기화
+            let str = "";
+            
+            //초기화된 문자열에 문자 입력
+            for(let i = 1; i <= 4; i++){
+                str += document.getElementById("la" + i).innerHTML + ",";
+            }
+
+            let foods = str.split(",");
+            foods.pop()
+
+            const findInputEl = document.getElementById("findInput");
+            let index = foods.indexOf(findInputEl.value);
+
+            if( -1 ==index){
+                alert("존재하지 않습니다.");
+            } else{
+                alert(findInputEl.value + "는 "+ index + "번째의 인덱스에 있습니다.")
+            }
+            console.log(foods);
+            
+            
+        }
+    </script>
+</body>
+</html>

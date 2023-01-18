@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습문제_1</title>
+</head>
+<body>
+    <h1>행 열 각각 입력받아 테이블 만들기</h1>
+    <h3>힌트 : 반복문은 자바랑 같습니다. 다만! 변수만 var 데이터형 이라는걸 기억해주세요</h3>
+
+    <br><br>
+    <button onclick="createTable();">테이블 생성</button>
+    
+    <div id="printDiv"></div>
+    
+    <script>
+        function createTable(){
+            var tb1 = document.getElementById("tb1");
+            var tr = prompt("행을 입력하세요");
+            var td = prompt("열을 입력하세요");
+            var printDiv = document.getElementById("printDiv");
+            
+            var t = "";
+            
+            t = "<table id='tb1' border='1'>";
+                for(var i = 1; i <= tr;i++){
+                    t += "<tr>"; 
+                        for(var k = 1; k<= td;k++){
+                            t += "<td height=20px; width=20px></td>";
+                        }
+                        t += "</tr>";
+                    }
+                    t += "</table>";
+                    
+                    console.log(t);
+                    printDiv.innerHTML = t;
+                }
+                </script>
+
+<h2>행 열 각각 입력받아서 새화면에서 출력하기</h2>
+
+<h4>힌트 : document.write()를 이용해 표를 출력하면 됩니다.</h4>
+
+<button onclick="searchTable();">테이블 새 화면 출력</button>
+<script>
+    function searchTable(){
+        var tb1 = document.getElementById("tb1");
+        var tr = prompt("행을 입력하세요");
+        var td = prompt("열을 입력하세요");
+        var printDiv = document.getElementById("printDiv1");
+        var cnt= 1;
+        var t = "";
+        
+        t = "<table id='tb1' border='1'>";
+            for(var i = 1; i <= tr;i++){
+                t += "<tr>"; 
+                    for(var k = 1; k<= td;k++){
+                        t += "<td height=20px; width=20px>"+ cnt++ +"</td>";
+                    }
+                    t += "</tr>";
+                }
+                t += "</table>";
+                
+                console.log(t);
+                printDiv.innerHTML = t;
+                document.write(printDiv.innerHTML);
+            }
+            </script>
+    <br><br>
+    <div id="printDiv1"></div>
+    
+
+</body>
+</html>
