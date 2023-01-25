@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>개요</title>
     <script src="resources/js/jquery-3.6.3.min.js"></script>
 </head>
 <body>
@@ -110,17 +110,18 @@
 
             //h3Arr.style.backgrondColor = "lightpurple";
             
-            // for(let i in h3Arr){
-            //     h3Arr[i].style.backgrondColor = "gray";
-            // }
+            for(let i ;i < h3Arr.length; i++){
+                console.log(h3Arr);
+                h3Arr[i].style.backgrondColor = "gray";
+            }
 
             // > jQuery 방식
             // $("h3").css("backgroundColor", "yellow");
             // $("선택자") :해당요소 선택
 
             // css() : 선택된 요소들의 스타일과 관련된 기능 수행
-
-            $("#test").css("color", "pink");
+            // $("#test").css("backgroundColor", "purple");
+            // $("#test").css("color", "pink");
         })
     </script>
 
