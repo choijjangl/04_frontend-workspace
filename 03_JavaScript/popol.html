@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구현</title>
+    <style>
+     table td{
+        height: 30px;
+        margin: 0px;
+     }
+     .radio{
+        margin-left: 0px;
+     }
+    </style>
+</head>
+<body>
+    <form action="test.do" method="get">
+        <fieldset>
+            <legend>회원 가입 양식</legend>
+            <table>
+               <tr>
+                <td>
+                    아이디
+                </td>
+                <td>
+                    <input type="text" id="userId" >
+                </td>
+                <td>
+                    <!-- <button id="checkId" onclick="return checkId();">중복확인</button> -->
+                    <input type="button" value="중복확인" onclick="return checkId();">
+                </td>
+               </tr>
+               <tr>
+                <td>
+                    비밀번호
+                </td>
+                <td>
+                    <input type="password" id="userPwd">
+                </td>
+                <td></td>
+               </tr>
+               <tr>
+                <td>
+                    비밀번호 확인
+                </td>
+                <td>
+                    <input type="password" id="checkPwd">
+                </td>
+                <td></td>
+               </tr>
+               <tr>
+                <td>
+                    지역
+                </td>
+                <td>
+                    <label for="seoul">서울</label>
+                    <input type="radio" class="radio"name="address" id="seoul" value="seoul">
+                    <label for="busan">부산</label>
+                    <input type="radio" class="radio"name="address" id="busan" value="busan">
+                    <label for="deagu">대구</label>
+                    <input type="radio" class="radio"name="address" id="deagu" value="deagu">
+                </td>
+                <td></td>
+               </tr>
+               <tr align="center">
+
+                <td colspan="3">
+                    <input type="reset" value="초기화" onclick="userId.style.backgroundColor= ''">
+                    <input type="submit" value="회원가입" onclick="return result();">
+                </td> 
+                
+
+               </tr>
+            </table>
+        </fieldset>
+    </form>
+    
+    <script>
+
+        function checkId(){
+            let userId = document.getElementById("userId");
+            regExp = /^[a-z][!@#0-9a-z]{5,11}$/;
+            
+            // console.log(userId);
+            // console.log(regExp);
+            if(regExp.test(userId.value)){
+                userId.style.backgroundColor = "green";
+            }else{
+                userId.style.backgroundColor = "red";
+            }
+            return false;
+        }
+        
+        function result(){
+            let userPwd = document.getElementById("userPwd");
+            let checkPwd = document.getElementById("checkPwd");
+            // let checkBox = document.getElementsByName("address");
+            // let cnt =0;
+            let ch = document.querySelectorAll("input[name='address']:checked").value;
+            
+            if(userPwd.value != checkPwd.value){
+                alert("비밀번호가 일치하지 않습니다.");
+                return false;
+            };
+            console.log(ch);
+            if(!ch){
+                alert("지역을 선택해주세요.");
+                return false;
+            }
+            // for(let i in checkBox){
+            //     if(checkBox[i].checked){
+            //         cnt++;
+            //     }
+            // }
+            // if(cnt==0){
+            //     alert("지역을 선택해주세요.");
+            //     return false;
+            // }
+        }
+        
+    </script>
+</body>
+</html>
