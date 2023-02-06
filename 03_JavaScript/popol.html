@@ -28,7 +28,6 @@
                     <input type="text" id="userId" >
                 </td>
                 <td>
-                    <!-- <button id="checkId" onclick="return checkId();">중복확인</button> -->
                     <input type="button" value="중복확인" onclick="return checkId();">
                 </td>
                </tr>
@@ -81,10 +80,9 @@
 
         function checkId(){
             let userId = document.getElementById("userId");
+            
             regExp = /^[a-z][!@#0-9a-z]{5,11}$/;
             
-            // console.log(userId);
-            // console.log(regExp);
             if(regExp.test(userId.value)){
                 userId.style.backgroundColor = "green";
             }else{
@@ -96,28 +94,24 @@
         function result(){
             let userPwd = document.getElementById("userPwd");
             let checkPwd = document.getElementById("checkPwd");
-            // let checkBox = document.getElementsByName("address");
-            // let cnt =0;
-            let ch = document.querySelectorAll("input[name='address']:checked").value;
+            let ch = document.getElementsByName("address");
+            let cnt = 0;
             
-            if(userPwd.value != checkPwd.value){
+            if(userPwd.value != checkPwd.value || userPwd.value == "" || checkPwd.value == ""){
                 alert("비밀번호가 일치하지 않습니다.");
                 return false;
             };
-            console.log(ch);
-            if(!ch){
+           
+            for(let i in ch){
+                if(ch[i].checked){
+                    cnt++;
+                }
+            }
+
+            if(cnt==0){
                 alert("지역을 선택해주세요.");
                 return false;
             }
-            // for(let i in checkBox){
-            //     if(checkBox[i].checked){
-            //         cnt++;
-            //     }
-            // }
-            // if(cnt==0){
-            //     alert("지역을 선택해주세요.");
-            //     return false;
-            // }
         }
         
     </script>
